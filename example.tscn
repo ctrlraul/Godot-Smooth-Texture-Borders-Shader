@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://pspjiq63pcd"]
+
+[ext_resource type="Texture2D" uid="uid://cbwyxcp2tyavl" path="res://example_wood.png" id="1_emdl2"]
+[ext_resource type="Shader" path="res://smooth_rect.gdshader" id="2_1djfo"]
+[ext_resource type="Texture2D" uid="uid://fgnbwux00448" path="res://example_white.png" id="3_mgpy7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ornkp"]
+shader = ExtResource("2_1djfo")
+shader_parameter/margin = 1
+
+[node name="Example" type="Node2D"]
+position = Vector2(1, 0)
+
+[node name="ExampleWood" type="Sprite2D" parent="."]
+position = Vector2(27, 256)
+rotation = 0.523599
+texture = ExtResource("1_emdl2")
+
+[node name="ExampleWood2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ornkp")
+position = Vector2(67, 256)
+rotation = 0.523599
+texture = ExtResource("1_emdl2")
+
+[node name="ExampleWhite" type="Sprite2D" parent="."]
+position = Vector2(26.8564, 287.928)
+rotation = 0.523599
+texture = ExtResource("3_mgpy7")
+
+[node name="ExampleWhite2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ornkp")
+position = Vector2(67, 288)
+rotation = 0.523599
+texture = ExtResource("3_mgpy7")
